@@ -1,17 +1,35 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+import  React  from "react";
+import reactDom from "react-dom";
+import Navbar from "./Nav";
+import './index.css'
+import {useState} from 'react';
+import Home from "./Home";
+import{ BrowserRouter as Router ,Route , Switch } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { facoffe } from "@fortawesome/free-solid-svg-icons";
+import Abouts from "./Abouts"
+import Skills from "./skills";
+const App = () => {
+    return (
+        <Router>
+            <div className="bg-gray-100 h-screen">
+                <Navbar />
+                <Switch> 
+                    <Route exact path="/"> 
+                        <Home/>
+                    </Route>
+                    <Route  path="/Abouts">
+                        <Abouts/>
+                    </Route> 
+                    <Route>
+                        <Skills/>
+                    </Route>
+                 </Switch> 
+            </div>
+        </Router>
+    );
+}
+reactDom.render(
+    <App/>,
+    document.querySelector('#root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

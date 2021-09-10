@@ -1,13 +1,53 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+html,body{
+    margin: 0;
+    font-family: "Quicksand";
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.grow-HTML{
+    animation-name: grows;
+    animation-duration: 3s;
+    width: 95%;
+}
+@keyframes grows{
+    from{width: 8px;}
+    to{width: 95%;}
+}
+.grow-CSS{
+    animation-name: growscss;
+    animation-duration: 3s;
+    width: 90%;
+}
+@keyframes growscss{
+    from{width: 8px;}
+    to{width: 90%;}
+}
+.grow-JS{
+    animation-name: growsjs;
+    animation-duration: 3s;
+    width: 70%;
+}
+@keyframes growsjs{
+    from{width: 8px;}
+    to{width: 70%;}
+}
+.grow-CSSF{
+    animation-name: grows;
+    animation-duration: 3s;
+    width: 95%;
+}
+@keyframes grows{
+    from{width: 8px;}
+    to{width: 95%;}
+}
+.grow-REACT{
+    animation-name: growsreact;
+    animation-duration: 3s;
+    width: 40%;
+}
+@keyframes growsreact{
+    from{width: 8px;}
+    to{width: 40%;}
 }
